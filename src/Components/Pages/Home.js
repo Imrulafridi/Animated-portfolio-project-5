@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import useWebAnimations, { fadeInRight } from "@wellyshen/use-web-animations";
-import Typed from 'react-typed'
 import image from "../images/webdevep.svg";
 
 const Home = () => {
@@ -28,16 +27,7 @@ const Home = () => {
     <div className="showcase">
       <div className="showcase-content">
         <h2>
-          I am A{" "}
-          <Typed
-            strings={[
-              "Web Developer",
-              "Web Designer",
-            ]}
-            typeSpeed={40}
-            backSpeed={50}
-            loop
-          />
+          I am A
         </h2>
         <p>
           Hi My name is Imranullah Afridi, I am a full stack web developer with
