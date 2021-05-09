@@ -1,4 +1,5 @@
-import React from "react";
+import useWebAnimations, { fadeInRight , flip} from "@wellyshen/use-web-animations";
+import React,{useEffect} from "react";
 import styled from "styled-components";
 import Image from "../images/about.svg";
 
@@ -22,6 +23,15 @@ const AboutPage = styled.div`
 `;
 
 const About = () => {
+  const image = useWebAnimations({ ...fadeInRight })
+  
+  useEffect(() => {
+    const imge = image.ref.current;
+    imge.addEventListener("click", () => {
+      image.animate({...flip})
+    })
+  });
+
   return (
     <AboutPage>
       <h1>About Me</h1>
@@ -34,7 +44,7 @@ const About = () => {
         nisi eos excepturi.
       </p>
       <div>
-      <img src={Image} alt="" />
+        <img src={Image} alt="" ref={ image.ref}/>
       </div>
     </AboutPage>
   );
