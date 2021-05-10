@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import Typewriter from "./Typewriter/typewriter";
-import useWebAnimations, { fadeInRight } from "@wellyshen/use-web-animations";
+import useWebAnimations from "@wellyshen/use-web-animations";
 import image from "../images/webdevep.svg";
 
 const Home = () => {
