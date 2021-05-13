@@ -1,15 +1,18 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import Typewriter from "./Typewriter/typewriter";
+// import Typewriter from "./Typewriter/typewriter";
 import useWebAnimations from "@wellyshen/use-web-animations";
 import image from "../images/webdevep.svg";
+import Typewriter from "typewriter-effect";
+
+
 
 const Home = () => {
-  const words = [
-    "Web Developer",
-    "Web Designer",
-    "FrontEnd Developer",
-  ];
+  // const words = [
+  //   "Web Developer",
+  //   "Web Designer",
+  //   "FrontEnd Developer",
+  // ];
 
   const pic = useWebAnimations({
     keyframes: [{ transform: "translateY(50px)" }],
@@ -32,7 +35,13 @@ const Home = () => {
     <div className="showcase">
       <div className="showcase-content">
         <h2>
-          I am a <Typewriter data={words} />
+          I am a <Typewriter
+            options={{
+              strings: ["Web Developer", "Web Designer"],
+              autoStart: true,
+              loop: true,
+            }}
+          />
         </h2>
         <p>
           Hi My name is Imranullah Afridi, I am a full stack web developer with
