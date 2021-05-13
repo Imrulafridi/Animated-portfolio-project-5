@@ -8,24 +8,22 @@ import {
   Typography,
 } from "@material-ui/core";
 
-const ProjectItem = ({ image, title, githubUrl, surgeUrl }) => {
+const ProjectItem = ({ image, title, body, githubUrl, surgeUrl }) => {
   return (
     <div>
       <CardActionArea>
         <CardMedia
           component="img"
           alt="Contemplative Reptile"
-          height="140"
+          height="200"
           image={image}
-          title="Project 1"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {body}
           </Typography>
         </CardContent>
       </CardActionArea>

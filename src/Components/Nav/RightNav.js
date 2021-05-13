@@ -7,7 +7,7 @@ const Ul = styled.ul`
   display: flex;
   flex-flow: row nowrap;
   li {
-    color: #021d35;
+    color: #093b66;
     padding: 18px 10px;
   }
   li:hover {
