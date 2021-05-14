@@ -1,5 +1,8 @@
-import useWebAnimations, { fadeInRight , flip} from "@wellyshen/use-web-animations";
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
+import useWebAnimations, {
+  fadeInLeft,
+  flip,
+} from "@wellyshen/use-web-animations";
 import styled from "styled-components";
 import Image from "../images/about.svg";
 
@@ -9,7 +12,8 @@ const AboutPage = styled.div`
   max-width: 500px;
   display: flex;
   flex-direction: column;
-  h1, p {
+  h1,
+  p {
     margin-bottom: 20px;
   }
   @media (max-width: 768px) {
@@ -23,13 +27,13 @@ const AboutPage = styled.div`
 `;
 
 const About = () => {
-  const image = useWebAnimations({ ...fadeInRight })
-  
+  const image = useWebAnimations({ ...fadeInLeft });
+
   useEffect(() => {
     const imge = image.ref.current;
     imge.addEventListener("click", () => {
-      image.animate({...flip})
-    })
+      image.animate({ ...flip });
+    });
   });
 
   return (
@@ -44,7 +48,7 @@ const About = () => {
         nisi eos excepturi.
       </p>
       <div>
-        <img src={Image} alt="" ref={ image.ref}/>
+        <img src={Image} alt="" ref={image.ref} />
       </div>
     </AboutPage>
   );
