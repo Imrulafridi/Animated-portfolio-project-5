@@ -38,6 +38,7 @@ a {
   width: 100%;
   height: 91vh;
   background: linear-gradient(to right, #021d35, #5086d1);
+  border-top-right-radius: 50%;
   opacity: 0.8;
   z-index: -999;
 }
@@ -152,6 +153,11 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .contact-text img {
+    width: 180px;
+    height: 150px;
   }
 
   .form-group div {
