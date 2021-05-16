@@ -111,8 +111,8 @@ a {
   flex-direction: column;
 }
 
-.form-group div input[type=text],
-.form-group div input[type=email] {
+.form-group div input[type="text"],
+.form-group div input[type="email"] {
   border: none;
   border-bottom: 2px solid;
   border-radius: 0;
@@ -125,14 +125,56 @@ a {
   outline: none;
 }
 
-.form-group div input[type=submit] {
+.form-group div input[type="submit"] {
   background-color: #021d35;
   color: white;
 }
 
-.form-group div input[type=submit]:hover {
+.form-group div input[type="submit"]:hover {
   background-color: #3e73bc;
   cursor: pointer;
+}
+
+.item-1 {
+  grid-area: item1;
+}
+
+.item-2 {
+  grid-area: item2;
+}
+
+.item-2 > h2 {
+  align-self: center;
+}
+
+.item-3 {
+  grid-area: item3;
+}
+
+.item-3 a {
+  color: white;
+}
+
+.item-3 a:hover {
+  color: #3e73bc;
+}
+
+.item-4 {
+  padding: 30px;
+  grid-area: item4;
+}
+
+.footer {
+  background-color: #414141;
+  border-bottom-left-radius: 50%;
+  color: white;
+  padding: 30px 15px 0 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "item1 item2 item3"
+    "item4 item4 item4 ";
 }
 
 @media only screen and (max-width: 768px) {
@@ -162,5 +204,31 @@ a {
 
   .form-group div {
     margin: 25px;
+  }
+
+  .item-3 {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item-3 div {
+    padding: 10px 10px 0 10px;
+  }
+
+  .footer {
+    width: auto;
+    padding: 30px 15px 0 15px;
+    gap: 20px;
+    align-self: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "item1 item1"
+      "item2 item2"
+      "item3 item3"
+      "item4 item4";
   }
 }
