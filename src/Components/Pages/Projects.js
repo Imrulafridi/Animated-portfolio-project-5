@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { p1img, p2img, p3img, p4img } from "../images/index";
+import { p1img, p2img, p3img, p4img, p5img } from "../images/index";
 import { makeStyles } from "@material-ui/core/styles";
 import { Container, Card, Grid } from "@material-ui/core";
 import ProjectItem from "./ProjectItem";
@@ -21,6 +21,8 @@ const Projects = () => {
   const p2 = useWebAnimations({ ...rollIn });
   const p3 = useWebAnimations({ ...rollIn });
   const p4 = useWebAnimations({ ...rollIn });
+  const p5 = useWebAnimations({ ...rollIn });
+  
 
   useEffect(() => {
     p1.ref.current.addEventListener("click", () => {
@@ -83,6 +85,17 @@ const Projects = () => {
               body="An animation project of Web Animation Api built in react hook style, converted from plain javascript into react"
               githubUrl="https://github.com/Imrulafridi/Red-Queen-Race-Project4A"
               surgeUrl="http://imrulafridi-redqueen-race-4a.surge.sh/"
+            />
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} ref={p5.ref}>
+          <Card className={classes.root}>
+            <ProjectItem
+              image={p5img}
+              title="Tiny Animated Website"
+              body="An animation project of Web Animation Api built in react hook style, converted from plain javascript into react"
+              githubUrl="https://github.com/Imrulafridi/Tiny-Animation-4b"
+              surgeUrl="http://imrulafridi-tiny-animation-4b.surge.sh/"
             />
           </Card>
         </Grid>
